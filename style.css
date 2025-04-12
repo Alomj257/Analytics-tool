@@ -60,6 +60,17 @@ input[type="file"] {
   font-weight: 400;
 }
 
+.angled-bg {
+  background: linear-gradient(135deg, #3b6efb, #1e3c72);
+  transform: skewY(-3deg);
+  /* transform-origin: top left; */
+  z-index: 1;
+}
+
+.trial-card {
+  position: relative;
+  z-index: 2;
+}
 /* Responsive Styles */
 
 /* Medium Screens (<= 992px) */

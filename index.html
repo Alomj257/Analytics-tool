@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
-    
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
@@ -74,7 +74,8 @@
     <section class="text-center py-5 bg-white fade-in">
         <div class="container">
             <h1 class="welcome display-6 fw-bold mb-5">Welcome to our TikTok and YouTube Analytics Tool</h1>
-            <p class="lead fw-bold mb-5">Download comments and likes data from your favorite videos for insightful analysis.</p>
+            <p class="lead fw-bold mb-5">Download comments and likes data from your favorite videos for insightful
+                analysis.</p>
             <div class="d-flex justify-content-center flex-wrap gap-3">
                 <a href="#" class="btn btn-primary fw-semibold px-5 py-3 hero-btn">Start Free Trial</a>
                 <a href="#" class="btn btn-outline-primary fw-semibold px-5 py-3 hero-btn">Learn More</a>
@@ -83,60 +84,79 @@
     </section>
 
     <!-- About Section -->
-  <section class="about-section py-5 bg-white">
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-md-6 mb-4 mb-md-0">
-          <img src="./assets/about1.jpg" class="img-fluid rounded shadow" style="height: 600px; width: 100%;" alt="About Image" />
+    <section class="about-section py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4 mb-md-0">
+                    <img src="./assets/about1.jpg" class="img-fluid rounded shadow" style="height: 600px; width: 100%;"
+                        alt="About Image" />
+                </div>
+                <div class="col-md-6">
+                    <div class="ps-md-4 border-start border-2">
+                        <h2 class="fw-bold mb-4">Download TikTok and YouTube Comments and Likes</h2>
+                        <p class="mb-4">Easily download comments and likes data from TikTok and YouTube videos into CSV
+                            files.</p>
+                        <h3 class="fw-bold mb-3">Graphing Options</h3>
+                        <p class="mb-4">Convert data from CSV files into graphs based on various criteria such as likes
+                            as a percent of views, total comments, percent of comments to views, and more.</p>
+                        <h3 class="fw-bold mb-3">Free Trial Available</h3>
+                        <p>Sign up for a free trial to download comments and likes of up to 10 videos and access
+                            graphing options.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-6">
-          <div class="ps-md-4 border-start border-2">
-            <h2 class="fw-bold mb-4">Download TikTok and YouTube Comments and Likes</h2>
-            <p class="mb-4">Easily download comments and likes data from TikTok and YouTube videos into CSV files.</p>
-            <h3 class="fw-bold mb-3">Graphing Options</h3>
-            <p class="mb-4">Convert data from CSV files into graphs based on various criteria such as likes as a percent of views, total comments, percent of comments to views, and more.</p>
-            <h3 class="fw-bold mb-3">Free Trial Available</h3>
-            <p>Sign up for a free trial to download comments and likes of up to 10 videos and access graphing options.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
     <!-- Tool Section -->
-<section class="container py-5">
-    <div class="row">
-      <div class="col-md-6 mb-4">
-        <h5 class="fw-bold fs-4">Export Comments</h5>
-        <p class="fw-semibold fs-5">Enter a TikTok or YouTube Video URL:</p>
-        <input type="text" class="form-control mb-3" placeholder="Paste video URL here" />
-        <button class="btn btn-outline-primary fw-semibold px-4">Download CSV</button>
-      </div>
-      <div class="col-md-6">
-        <h5 class="fw-bold fs-4">Graph Tool</h5>
-        <p class="fw-semibold fs-5">Upload CSV:</p>
-        <input type="file" class="form-control mb-3" />
-        <button class="btn btn-primary fw-semibold px-4">Generate</button>
-      </div>
-    </div>
-  </section>
-  
-
-    <!-- Graph Section -->
     <section class="container py-5">
         <div class="row">
-          <div class="col">
-            <div class="p-5 rounded text-center text-muted">
-              <canvas id="waveGraph" width="100%" height="250"></canvas>
+            <div class="col-md-6 mb-4">
+                <h5 class="fw-bold fs-4">Export Comments</h5>
+                <p class="fw-semibold fs-5">Enter a TikTok or YouTube Video URL:</p>
+                <input type="text" class="form-control mb-3" placeholder="Paste video URL here" />
+                <button class="btn btn-outline-primary fw-semibold px-4">Download CSV</button>
             </div>
-          </div>
+            <div class="col-md-6">
+                <h5 class="fw-bold fs-4">Graph Tool</h5>
+                <p class="fw-semibold fs-5">Upload CSV:</p>
+                <input type="file" class="form-control mb-3" />
+                <button class="btn btn-primary fw-semibold px-4">Generate</button>
+            </div>
         </div>
-      </section>
+    </section>
 
-    <!-- Trial Section -->
-    <section class="bg-light py-5 text-center">
-        <h5 class="fw-bold">Try the full version free for 7 days!</h5>
-        <a class="btn btn-primary mt-3 fw-semibold px-4 py-2" href="#">Start Trial</a>
+
+    <!-- Graph Section -->
+    <!-- <section class="container py-5">
+        <div class="row">
+            <div class="col">
+                <div class="p-5 rounded text-center text-muted">
+                    <canvas id="waveGraph" width="100%" height="250"></canvas>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="position-relative py-5">
+        <!-- Angled Background -->
+        <div class="angled-bg position-absolute top-0 start-0 w-100 h-100"></div>
+
+        <div class="container position-relative z-2">
+            <div class="trial-card p-5 rounded-4 shadow-lg bg-white">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h2 class="fw-bold text-dark">Start Your Free Trial Today!</h2>
+                        <p class="text-secondary mb-0">
+                            Sign up now to download comments and likes from up to 10 TikTok or YouTube videos for free.
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-md-end text-start mt-4 mt-md-0">
+                        <a href="#" class="btn btn-primary fw-semibold px-4 py-2">Sign Up for Free Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Subscription Section -->
@@ -158,33 +178,33 @@
 <script>
     const ctx = document.getElementById('waveGraph').getContext('2d');
     const waveGraph = new Chart(ctx, {
-      type: 'line', // Line graph for wave-like appearance
-      data: {
-        labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], // Sample x-axis labels
-        datasets: [{
-          label: 'Your record.',
-          data: [10, 25, 50, 75, 50, 25, 10, 5, 15, 30], // Sample data to simulate a wave
-          backgroundColor: 'rgba(255, 99, 132, 0.2)', // Red with some transparency for background
-          borderColor: 'rgba(255, 99, 132, 1)', // Red color for the wave line
-          borderWidth: 2,
-          fill: true, // To fill the area under the wave
-          lineTension: 0.4 // Creates a wave-like curve
-        }]
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false, // To maintain custom height
-        scales: {
-          x: {
-            display: false // Hides x-axis labels for a cleaner look
-          },
-          y: {
-            beginAtZero: true, // Ensures y-axis starts at 0
-            max: 100 // Limiting max value for y-axis to make the wave clear
-          }
+        type: 'line', // Line graph for wave-like appearance
+        data: {
+            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], // Sample x-axis labels
+            datasets: [{
+                label: 'Your record.',
+                data: [10, 25, 50, 75, 50, 25, 10, 5, 15, 30], // Sample data to simulate a wave
+                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Red with some transparency for background
+                borderColor: 'rgba(255, 99, 132, 1)', // Red color for the wave line
+                borderWidth: 2,
+                fill: true, // To fill the area under the wave
+                lineTension: 0.4 // Creates a wave-like curve
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false, // To maintain custom height
+            scales: {
+                x: {
+                    display: false // Hides x-axis labels for a cleaner look
+                },
+                y: {
+                    beginAtZero: true, // Ensures y-axis starts at 0
+                    max: 100 // Limiting max value for y-axis to make the wave clear
+                }
+            }
         }
-      }
     });
-  </script>
+</script>
 
 </html>
