@@ -1,5 +1,94 @@
+/* Base Styles */
 body {
-    background-color: #f8f9fa;
-    font-family: Arial, sans-serif;
+  font-family: 'Raleway', sans-serif;
+  background-color: #fff;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  font-weight: 900;
+}
+
+.navbar .btn {
+  font-size: 1rem;
+  padding: 0.75rem 2rem !important;
+}
+
+/* Welcome Section */
+.welcome {
+  font-size: 55px;
+  font-weight: 500 !important;
+}
+
+/* Buttons */
+.hero-btn {
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 0.75rem 1.25rem;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="file"] {
+  font-size: 1rem;
+  padding: 0.75rem;
+}
+
+/* Paragraph Size Utility */
+.p-5 {
+  font-size: 1.25rem;
+}
+
+/* Responsive Styles */
+
+/* Medium Screens (<= 992px) */
+@media (max-width: 992px) {
+  .welcome {
+    font-size: 45px;
+    text-align: center;
   }
-  
+}
+
+/* Small Screens (<= 768px) */
+@media (max-width: 768px) {
+  .navbar-nav {
+    font-size: 1rem;
+  }
+
+  .navbar-toggler {
+    font-size: 1.25rem;
+  }
+
+  .navbar-collapse {
+    font-size: 1.1rem;
+  }
+
+  .btn,
+  .navbar .btn {
+    font-size: 1.1rem;
+    padding: 0.75rem 1.25rem;
+  }
+
+  .welcome {
+    font-size: 35px;
+    text-align: center;
+  }
+}
+
+/* Extra Small Screens (<= 576px) */
+@media (max-width: 576px) {
+  .welcome {
+    font-size: 26px;
+    text-align: center;
+  }
+}
