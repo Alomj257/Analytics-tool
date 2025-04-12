@@ -1,7 +1,7 @@
 /* Base Styles */
 body {
   font-family: 'Raleway', sans-serif;
-  background-color: #fff;
+  background-color: white;
 }
 
 /* Navbar */
@@ -11,8 +11,8 @@ body {
 
 .nav-link {
   font-size: 1.2rem;
-  padding: 0.5rem 1rem;
   font-weight: 900;
+  padding: 0.5rem 1rem;
 }
 
 .navbar .btn {
@@ -20,7 +20,7 @@ body {
   padding: 0.75rem 2rem !important;
 }
 
-/* Welcome Section */
+/* Hero Section */
 .welcome {
   font-size: 55px;
   font-weight: 500 !important;
@@ -44,9 +44,20 @@ input[type="file"] {
   padding: 0.75rem;
 }
 
-/* Paragraph Size Utility */
+/* Graph Paragraph */
 .p-5 {
   font-size: 1.25rem;
+}
+
+/* About Section */
+.about-section h2,
+.about-section h3 {
+  font-weight: 700;
+}
+
+.about-section p {
+  font-size: 1.1rem;
+  font-weight: 400;
 }
 
 /* Responsive Styles */
@@ -90,5 +101,10 @@ input[type="file"] {
   .welcome {
     font-size: 26px;
     text-align: center;
+  }
+
+  .about-section .border-start {
+    border-left: none !important;
+    padding-left: 0 !important;
   }
 }
