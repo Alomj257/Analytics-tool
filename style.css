@@ -71,6 +71,32 @@ input[type="file"] {
   position: relative;
   z-index: 2;
 }
+
+.btn-outline-primary {
+  background-color: transparent;
+  border: none;
+  color: #3b6efb;
+  transition: background-color 0.3s ease;
+}
+.btn-outline-primary:hover {
+  background-color: #e6ecfa;
+  color: #3b6efb;
+}
+
+.btn-primary {
+  background-color: #3b6efb;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: #335fd8;
+}
+
+.card {
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-3px);
+}
 /* Responsive Styles */
 
 /* Medium Screens (<= 992px) */
