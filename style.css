@@ -102,9 +102,26 @@ input[type="file"] {
 .card:hover {
   transform: translateY(-3px);
 }
-.footer-simple {
-  background: linear-gradient(135deg, #0d47a1, #1976d2);
-  font-size: 0.95rem;
+.footer-link {
+  color: rgb(85, 84, 84);
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer-link:hover {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+.social-icon {
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+  opacity: 0.8;
 }
 /* Responsive Styles */
 

@@ -14,6 +14,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
 
+    <!-- Font Awesome CDN for Social Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
     <!-- Include Chart.js CDN in your HTML head or before closing body tag -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
@@ -42,7 +46,7 @@
                     <li class="nav-item"><a class="nav-link fw-medium small" href="#">YouTube</a></li>
                 </ul>
                 <div class="d-flex gap-2">
-                    <a href="#" class="btn btn-primary px-4 py-2 fw-semibold">Sign In</a>
+                    <a href="login.html" class="btn btn-primary px-4 py-2 fw-semibold">Sign In</a>
                     <a href="#" class="btn btn-outline-primary px-4 py-2 fw-semibold">Sign Up</a>
                 </div>
             </div>
@@ -113,14 +117,38 @@
         <div class="row">
             <div class="col-md-6 mb-4">
                 <h5 class="fw-bold fs-4">Export Comments</h5>
-                <p class="fw-semibold fs-5">Enter a TikTok or YouTube Video URL:</p>
+                <p class="fw-semibold fs-5 d-inline-block">
+                    Enter a TikTok or YouTube Video URL:
+                    <span class="instruction-icon" style="cursor: pointer;" data-bs-toggle="tooltip"
+                        data-bs-placement="top"
+                        title="Enter a valid TikTok or YouTube URL to fetch the comments. Make sure it's a publicly available video.">
+                        <i class="bi bi-info-circle" style="font-size: 1.2rem;"></i>
+                    </span>
+                </p>
                 <input type="text" class="form-control mb-3" placeholder="Paste video URL here" />
                 <button class="btn btn-outline-primary fw-semibold px-4">Download CSV</button>
             </div>
+
             <div class="col-md-6">
                 <h5 class="fw-bold fs-4">Graph Tool</h5>
-                <p class="fw-semibold fs-5">Upload CSV:</p>
+                <p class="fw-semibold fs-5 d-inline-block">
+                    Upload CSV:
+                    <span class="instruction-icon" style="cursor: pointer;" data-bs-toggle="tooltip"
+                        data-bs-placement="top" title="Upload a CSV file with the extracted data for graph generation.">
+                        <i class="bi bi-info-circle" style="font-size: 1.2rem;"></i>
+                    </span>
+                </p>
                 <input type="file" class="form-control mb-3" />
+
+                <!-- Eligibility Dropdown -->
+                <label for="eligibilityDropdown" class="fw-semibold fs-5">Eligibility:</label>
+                <select class="form-select mb-3" id="eligibilityDropdown">
+                    <option selected>Select Eligibility</option>
+                    <option value="option1">Option 1</option>
+                    <option value="option2">Option 2</option>
+                    <option value="option3">Option 3</option>
+                </select>
+
                 <button class="btn btn-primary fw-semibold px-4">Generate</button>
             </div>
         </div>
@@ -128,7 +156,7 @@
 
 
     <!-- Graph Section -->
-    <!-- <section class="container py-5">
+    <section class="container py-5">
         <div class="row">
             <div class="col">
                 <div class="p-5 rounded text-center text-muted">
@@ -136,7 +164,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Trial Section -->
     <section class="position-relative py-5">
@@ -161,115 +189,164 @@
     </section>
 
     <!-- Subscription Section -->
-<section class="py-5 text-center bg-white">
-    <div class="container">
-      <h6 class="text-uppercase text-muted mb-2">Choose the perfect plan for you</h6>
-      <h2 class="fw-bold mb-3">Pricing Plan</h2>
-      <p class="text-muted mb-5">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-  
-      <!-- Toggle Buttons -->
-      <div class="d-inline-flex mb-5 border border-primary rounded-pill overflow-hidden">
-        <button class="btn btn-primary px-4 py-2 fw-semibold fs-6 rounded-0 monthly">Monthly</button>
-        <button class="btn btn-outline-primary px-4 py-2 fw-semibold fs-6 rounded-0 yearly">Yearly</button>
-      </div>
-  
-      <!-- Pricing Cards -->
-      <div class="row g-4">
-        <!-- Basic Plan -->
-        <div class="col-md-4">
-          <div class="card h-100 border shadow-sm rounded-4">
-            <div class="card-body py-5 px-4">
-              <h6 class="text-uppercase text-muted mb-3">Basic Plan</h6>
-              <h3 class="fw-bold text-dark mb-1">$50 USD</h3>
-              <p class="text-muted mb-2">per month</p>
-              <p class="text-muted small mb-4">or $200 yearly</p>
-              <div class="text-start">
-                <p>Download comments and likes of up to 10 videos</p>
-                <p>Feature text goes here</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Business Plan (Highlighted with Gradient) -->
-        <div class="col-md-4">
-          <div class="card h-100 text-white border-0 shadow rounded-2" style="background: linear-gradient(135deg, #0a3ecf, #527fe7);">
-            <div class="card-body py-5 px-4">
-              <h6 class="text-uppercase mb-3">Business Plan</h6>
-              <h3 class="fw-bold mb-1">$29/mo</h3>
-              <p class="mb-2">or $299 yearly</p>
-              <div class="text-start">
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!-- Enterprise Plan -->
-        <div class="col-md-4">
-          <div class="card h-100 border shadow-sm rounded-4">
-            <div class="card-body py-5 px-4">
-              <h6 class="text-uppercase text-muted mb-3">Enterprise Plan</h6>
-              <h3 class="fw-bold text-dark mb-1">$49/mo</h3>
-              <p class="text-muted mb-2">or $499 yearly</p>
-              <div class="text-start">
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-                <p>Feature text goes here</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-    <!-- Footer -->
-    <footer class="footer-simple text-white text-center py-4">
+    <section class="py-5 text-center bg-white">
         <div class="container">
-          <p class="mb-0 small">&copy; 2025 Your Company Name. All rights reserved.</p>
+            <h6 class="text-uppercase text-muted mb-2" style="font-weight: bold; font-size: 1.1rem;">Choose the perfect
+                plan for you</h6>
+            <h2 class="fw-bold mb-3" style="font-size: 2rem;">Pricing Plan</h2>
+            <p class="text-muted mb-5" style="font-weight: bold; font-size: 1.1rem;">Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.</p>
+
+            <!-- Toggle Buttons -->
+            <div class="d-inline-flex mb-5 border border-primary rounded-pill overflow-hidden">
+                <button class="btn btn-primary px-4 py-2 fw-semibold fs-6 rounded-0 monthly"
+                    style="font-size: 1.1rem;">Monthly</button>
+                <button class="btn btn-outline-primary px-4 py-2 fw-semibold fs-6 rounded-0 yearly"
+                    style="font-size: 1.1rem;">Yearly</button>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="row g-4">
+                <!-- Basic Plan -->
+                <div class="col-md-4">
+                    <div class="card h-100 border shadow-sm rounded-4">
+                        <div class="card-body py-5 px-4">
+                            <h6 class="text-uppercase text-muted mb-3" style="font-weight: bold; font-size: 1.2rem;">
+                                Basic Plan</h6>
+                            <h3 class="fw-bold text-dark mb-1" style="font-size: 2.2rem;">XX</h3>
+                            <p class="text-muted mb-2" style="font-weight: bold; font-size: 1.1rem;">or XX yearly <span
+                                    class="text-warning" style="font-size: 1.2rem;">Save 40%</span></p>
+                            <div class="text-start" style="font-size: 1.1rem;">
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Download comments and likes of up to 10 videos</p>
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: red; font-size: 1.5rem; font-weight: bold;">&#10007;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: red; font-size: 1.5rem; font-weight: bold;">&#10007;</span>
+                                    Feature text goes here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Business Plan (Highlighted with Gradient) -->
+                <div class="col-md-4">
+                    <div class="card h-100 text-white border-0 shadow rounded-2"
+                        style="background: linear-gradient(135deg, #627ecc, #0945d1); border: 3px solid #0a3ecf;">
+                        <div class="card-body py-5 px-4">
+                            <h6 class="text-uppercase mb-3" style="font-weight: bold; font-size: 1.2rem;">Business Plan
+                            </h6>
+                            <h3 class="fw-bold mb-1" style="font-size: 2.2rem;">XX</h3>
+                            <p class="mb-2" style="font-weight: bold; font-size: 1.1rem;">or XX yearly <span
+                                    class="text-warning" style="font-size: 1.2rem;">Save 40%</span></p>
+                            <div class="text-start" style="font-size: 1.1rem;">
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: red; font-size: 1.5rem; font-weight: bold;">&#10007;</span>
+                                    Feature text goes here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Enterprise Plan -->
+                <div class="col-md-4">
+                    <div class="card h-100 border shadow-sm rounded-4">
+                        <div class="card-body py-5 px-4">
+                            <h6 class="text-uppercase text-muted mb-3" style="font-weight: bold; font-size: 1.2rem;">
+                                Enterprise Plan</h6>
+                            <h3 class="fw-bold text-dark mb-1" style="font-size: 2.2rem;">XX</h3>
+                            <p class="text-muted mb-2" style="font-weight: bold; font-size: 1.1rem;">or XX yearly <span
+                                    class="text-warning" style="font-size: 1.2rem;">Save 40%</span></p>
+                            <div class="text-start" style="font-size: 1.1rem;">
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: green; font-size: 1.5rem; font-weight: bold;">&#10003;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: red; font-size: 1.5rem; font-weight: bold;">&#10007;</span>
+                                    Feature text goes here</p>
+                                <p><span style="color: red; font-size: 1.5rem; font-weight: bold;">&#10007;</span>
+                                    Feature text goes here</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </footer>
+    </section>
+
+
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-black pt-5 pb-4">
+        <div class="container text-md-start text-center">
+            <div class="row gy-4">
+
+                <!-- Logo & About -->
+                <div class="col-md-4">
+                    <a href="#" class="d-inline-flex align-items-center text-black text-decoration-none mb-3">
+                        <img src="./assets/logo.png" alt="Logo" style="height: 60px;" class="me-3" />
+                        <span class="fw-bold fs-5">Video Analytics Tool</span>
+                    </a>
+                    <p class="fw-bold fs-6 mt-3 text-muted">Analyze TikTok & YouTube comments and likes easily.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-2">
+                    <h6 class="fw-bold fs-5 mb-3">Quick Links</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#" class="footer-link">Home</a></li>
+                        <li><a href="#" class="footer-link">Tutorial</a></li>
+                        <li><a href="#" class="footer-link">TikTok</a></li>
+                        <li><a href="#" class="footer-link">YouTube</a></li>
+                    </ul>
+                </div>
+
+                <!-- Account -->
+                <div class="col-md-2">
+                    <h6 class="fw-bold fs-5 mb-3">Account</h6>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="#" class="footer-link">Sign In</a></li>
+                        <li><a href="#" class="footer-link">Sign Up</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="col-md-4">
+                    <h6 class="fw-bold fs-5 mb-3">Follow Us</h6>
+                    <div class="d-flex gap-4 fs-3">
+                        <a href="#" class="text-primary social-icon"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-info social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-danger social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-danger social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="border-secondary my-4" />
+
+            <div class="text-center fw-bold fs-6">
+                &copy; 2025 Video Analytics Tool. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
-<!-- Chart Script -->
-<script>
-    const ctx = document.getElementById('waveGraph').getContext('2d');
-    const waveGraph = new Chart(ctx, {
-        type: 'line', // Line graph for wave-like appearance
-        data: {
-            labels: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'], // Sample x-axis labels
-            datasets: [{
-                label: 'Your record.',
-                data: [10, 25, 50, 75, 50, 25, 10, 5, 15, 30], // Sample data to simulate a wave
-                backgroundColor: 'rgba(255, 99, 132, 0.2)', // Red with some transparency for background
-                borderColor: 'rgba(255, 99, 132, 1)', // Red color for the wave line
-                borderWidth: 2,
-                fill: true, // To fill the area under the wave
-                lineTension: 0.4 // Creates a wave-like curve
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false, // To maintain custom height
-            scales: {
-                x: {
-                    display: false // Hides x-axis labels for a cleaner look
-                },
-                y: {
-                    beginAtZero: true, // Ensures y-axis starts at 0
-                    max: 100 // Limiting max value for y-axis to make the wave clear
-                }
-            }
-        }
-    });
-</script>
+<script src="script.js"></script>
 
 </html>
