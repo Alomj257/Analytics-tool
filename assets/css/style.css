@@ -77,9 +77,11 @@ input[type="file"] {
   color: #3b6efb;
   transition: background-color 0.3s ease;
 }
-.monthly{
+
+.monthly {
   border: none;
 }
+
 .btn-outline-primary:hover {
   background-color: #e6ecfa;
   color: #3b6efb;
@@ -89,9 +91,11 @@ input[type="file"] {
   background-color: #3b6efb;
   border: none;
 }
-.yearly{
+
+.yearly {
   border: none;
 }
+
 .btn-primary:hover {
   background-color: #335fd8;
 }
@@ -99,9 +103,11 @@ input[type="file"] {
 .card {
   transition: transform 0.2s ease;
 }
+
 .card:hover {
   transform: translateY(-3px);
 }
+
 .footer-link {
   color: rgb(85, 84, 84);
   font-weight: bold;
@@ -123,6 +129,55 @@ input[type="file"] {
   transform: scale(1.2);
   opacity: 0.8;
 }
+
+.pricing-toggle {
+  border: 1px solid #0d6efd;
+  border-radius: 50px;
+  overflow: hidden;
+  display: inline-flex;
+}
+
+.pricing-toggle button {
+  background-color: white;
+  border: none;
+  color: #0d6efd;
+  padding: 0.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.pricing-toggle .active {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.pricing-toggle button:hover:not(.active) {
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+.save-badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: red;
+  margin-left: 6px;
+}
+
+.save-badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-left: 6px;
+  transition: color 0.3s;
+}
+
+#yearlyBtn.active .save-badge {
+  color: white;
+}
+
+#yearlyBtn:not(.active) .save-badge {
+  color: red;
+  /* Bootstrap green */
+}
+
 /* Responsive Styles */
 
 /* Medium Screens (<= 992px) */

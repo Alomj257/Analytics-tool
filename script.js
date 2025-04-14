@@ -47,3 +47,13 @@ var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggl
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
     return new bootstrap.Tooltip(tooltipTriggerEl)
 })
+
+document.getElementById('monthlyBtn').addEventListener('click', function () {
+    this.classList.add('active');
+    document.getElementById('yearlyBtn').classList.remove('active');
+  });
+
+  document.getElementById('yearlyBtn').addEventListener('click', function () {
+    this.classList.add('active');
+    document.getElementById('monthlyBtn').classList.remove('active');
+  });
