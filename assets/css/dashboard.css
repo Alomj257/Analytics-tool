@@ -1,49 +1,55 @@
 body {
-    font-family: 'Raleway', sans-serif;
-  }
+  font-family: 'Raleway', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-  .profile-dropdown {
-    position: relative;
-    display: inline-block;
-  }
+.main-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 15px;
+}
 
-  .profile-dropdown .dropdown-menu {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: 100%;
-    margin-top: 0.5rem;
-    background-color: #fff;
-    border: 1px solid #dee2e6;
-    border-radius: 0.5rem;
-    min-width: 200px;
-    z-index: 1000;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  }
+.toolbox {
+  padding: 40px;
+  width: 100%;
+  max-width: 1000px;
+}
 
-  .profile-dropdown:hover .dropdown-menu {
-    display: block;
-  }
+.footer {
+  margin-top: 60px;
+}
 
-  .profile-dropdown .dropdown-menu a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: #212529;
-    text-decoration: none;
-  }
+.profile-dropdown {
+  position: relative;
+}
 
-  .profile-dropdown .dropdown-menu a:hover {
-    background-color: #f8f9fa;
-  }
+.profile-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
 
-  .profile-name {
-    margin-left: 0.5rem;
-    font-weight: 500;
-  }
+.profile-dropdown .dropdown-menu a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #333;
+}
 
-  .dropdown-divider {
-    margin: 0;
-  }
+.profile-dropdown .dropdown-menu a:hover {
+  background-color: #f8f9fa;
+}
 
   /* Mobile profile section styling */
   .mobile-profile-section a {
