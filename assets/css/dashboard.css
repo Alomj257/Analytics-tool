@@ -51,15 +51,15 @@ body {
   background-color: #f8f9fa;
 }
 
-  /* Mobile profile section styling */
-  .mobile-profile-section a {
-    color: #000;
-    font-weight: 500;
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 0;
-  }
+/* Mobile profile section styling */
+.mobile-profile-section a {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+  display: block;
+  padding: 0.5rem 0;
+}
 
-  .mobile-profile-section hr {
-    margin: 0.25rem 0;
-  }
+.mobile-profile-section hr {
+  margin: 0.25rem 0;
+}
