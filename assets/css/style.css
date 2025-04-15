@@ -1,6 +1,6 @@
 /* Base Styles */
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway' !important;
   background-color: white;
 }
 
